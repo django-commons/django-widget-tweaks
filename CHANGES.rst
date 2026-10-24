@@ -1,6 +1,11 @@
 Changes
 =======
 
+Unreleased
+----------
+
+* Switched to trusted publisher release process with Django Commons
+
 1.5.1 (2025-04-25)
 ------------------
 
