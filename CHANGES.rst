@@ -1,6 +1,12 @@
 Changes
 =======
 
+Unreleased
+----------
+
+* Switched to trusted publisher release process with Django Commons
+* Switch from Jazzband org to Django Commons
+
 1.5.1 (2025-04-25)
 ------------------
 
@@ -11,7 +17,7 @@ Changes
 * Add Python 3.12 support
 * Add Python 3.13 support
 * Add PyPy 3.11 support
-* See GitHub releases for further release notes: https://github.com/jazzband/django-widget-tweaks/releases
+* See GitHub releases for further release notes: https://github.com/django-commons/django-widget-tweaks/releases
 
 1.5.0 (2023-08-25)
 ------------------
