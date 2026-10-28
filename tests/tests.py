@@ -344,6 +344,22 @@ class RenderFieldTagFieldReuseTest(TestCase):
         res = render_form('{% render_field form.simple foo="bar" v-model="username" %}')
         self.assertEqual(res.count('v-model="username"'), 1)
 
+    def test_render_field_nested_quotes(self):
+        res = render_form(
+            "{% render_field form.simple ::class=\"{'is-invalid': formFields.username.errors.length}\" %}"
+        )
+        assertIn(
+            ':class="{&#x27;is-invalid&#x27;: formFields.username.errors.length}"', res
+        )
+
+    def test_render_field_nested_double_quotes_in_single(self):
+        res = render_form(
+            "{% render_field form.simple ::class='{\"is-invalid\": formFields.username.errors.length}' %}"
+        )
+        assertIn(
+            ':class="{&quot;is-invalid&quot;: formFields.username.errors.length}"', res
+        )
+
 
 class RenderFieldTagUseTemplateVariableTest(TestCase):
     def test_use_template_variable_in_parameters(self):

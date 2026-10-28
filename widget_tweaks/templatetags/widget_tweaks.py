@@ -159,10 +159,13 @@ ATTRIBUTE_RE = re.compile(
         \+?=
     )
     (?P<value>
-    ['"]? # start quote
-        [^"']*
-    ['"]? # end quote
+        "(?:[^"\\]|\\.)*"
+        |
+        '(?:[^'\\]|\\.)*'
+        |
+        [^\s]*
     )
+    \Z
 """,
     re.VERBOSE | re.UNICODE,
 )
