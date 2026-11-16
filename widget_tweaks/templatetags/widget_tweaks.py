@@ -245,6 +245,9 @@ class FieldAttributeNode(Node):
 @register.filter("remove_attr")
 @silence_without_field
 def remove_attr(field, attr):
-    if attr in field.field.widget.attrs:
-        del field.field.widget.attrs[attr]
+    if hasattr(field, "as_widget"):
+        attrs = field.field.widget.attrs
+    else:
+        attrs = field.data["attrs"]
+    attrs.pop(attr, None)
     return field
