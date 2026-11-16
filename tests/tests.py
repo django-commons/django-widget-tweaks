@@ -1,5 +1,7 @@
 from unittest import TestCase
 
+from django.template import TemplateSyntaxError
+
 from .forms import (
     render_field,
     render_choice_field,
@@ -173,6 +175,12 @@ class FieldReuseTest(TestCase):
 
 
 class SimpleRenderFieldTagTest(TestCase):
+    def test_missing_field_argument(self):
+        with self.assertRaisesRegex(
+            TemplateSyntaxError, "'render_field' tag requires a form field"
+        ):
+            render_form("{% render_field %}")
+
     def test_attr(self):
         res = render_field_from_tag("simple", 'foo="bar"')
         assertIn('type="text"', res)

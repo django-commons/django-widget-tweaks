@@ -187,7 +187,7 @@ def render_field(parser, token):  # pylint: disable=too-many-locals
         tag_name = bits[0]  # noqa
         form_field = bits[1]
         attr_list = bits[2:]
-    except ValueError as exc:
+    except (IndexError, ValueError) as exc:
         raise TemplateSyntaxError(error_msg) from exc
 
     form_field = parser.compile_filter(form_field)
