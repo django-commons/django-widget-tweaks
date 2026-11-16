@@ -419,6 +419,17 @@ class SelectFieldTest(TestCase):
 
 
 class RadioFieldTest(TestCase):
+    def test_remove_attr(self):
+        res = render_choice_field("radio", 0, "remove_attr", "id")
+        assertNotIn('id="', res)
+        assertIn('type="radio"', res)
+        assertIn('name="radio"', res)
+        assertIn('value="option1"', res)
+
+    def test_remove_missing_attr(self):
+        res = render_choice_field("radio", 0, "remove_attr", "missing")
+        self.assertEqual(res, render_form("{{ form.radio.0 }}"))
+
     def test_first_choice(self):
         res = render_choice_field("radio", 0, "attr", "foo:bar")
         assertIn('type="radio"', res)
