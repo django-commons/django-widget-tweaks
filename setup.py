@@ -7,7 +7,7 @@ setup(
     setup_requires=["setuptools_scm"],
     author="Mikhail Korobov",
     author_email="kmike84@gmail.com",
-    url="https://github.com/jazzband/django-widget-tweaks",
+    url="https://github.com/django-commons/django-widget-tweaks",
     description="Tweak the form field rendering in templates, not in python-level form definitions.",
     long_description=open("README.rst").read() + "\n\n" + open("CHANGES.rst").read(),
     long_description_content_type="text/x-rst",

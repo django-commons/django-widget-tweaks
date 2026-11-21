@@ -2,20 +2,16 @@
 django-widget-tweaks
 ====================
 
-.. image:: https://jazzband.co/static/img/badge.svg
-   :target: https://jazzband.co/
-   :alt: Jazzband
-
 .. image:: https://img.shields.io/pypi/v/django-widget-tweaks.svg
    :target: https://pypi.python.org/pypi/django-widget-tweaks
    :alt: PyPI Version
 
-.. image:: https://github.com/jazzband/django-widget-tweaks/workflows/Test/badge.svg
-   :target: https://github.com/jazzband/django-widget-tweaks/actions
+.. image:: https://github.com/django-commons/django-widget-tweaks/workflows/Test/badge.svg
+   :target: https://github.com/django-commons/django-widget-tweaks/actions
    :alt: GitHub Actions
 
-.. image:: https://codecov.io/gh/jazzband/django-widget-tweaks/branch/master/graph/badge.svg
-   :target: https://app.codecov.io/gh/jazzband/django-widget-tweaks
+.. image:: https://codecov.io/gh/django-commons/django-widget-tweaks/branch/master/graph/badge.svg
+   :target: https://app.codecov.io/gh/django-commons/django-widget-tweaks
    :alt: Coverage
 
 Tweak the form field rendering in templates, not in python-level
@@ -422,8 +418,8 @@ Contributing
 If you've found a bug, implemented a feature or have a suggestion,
 do not hesitate to contact me, fire an issue or send a pull request.
 
-* Source code: https://github.com/jazzband/django-widget-tweaks/
-* Bug tracker: https://github.com/jazzband/django-widget-tweaks/issues
+* Source code: https://github.com/django-commons/django-widget-tweaks/
+* Bug tracker: https://github.com/django-commons/django-widget-tweaks/issues
 
 Testing
 -------
