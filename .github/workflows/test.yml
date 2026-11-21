@@ -39,8 +39,3 @@ jobs:
     - name: Tox tests
       run: |
         tox -v
-
-    - name: Upload coverage
-      uses: codecov/codecov-action@v7
-      with:
-        name: Python ${{ matrix.python-version }}
