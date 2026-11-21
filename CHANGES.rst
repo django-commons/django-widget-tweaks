@@ -1,8 +1,8 @@
 Changes
 =======
 
-Unreleased
-----------
+1.6.0 (2026-11-21)
+------------------
 
 * Add Django 6.1 support
 * Switched to trusted publisher release process with Django Commons
