@@ -7,6 +7,10 @@ Unreleased
 * Add Django 6.1 support
 * Switched to trusted publisher release process with Django Commons
 * Switch from Jazzband org to Django Commons
+* Drop support for Django 4.2, 5.0 and 5.1
+* Drop support for Python 3.9, 3.10 and PyPy 3.10
+* Add Django 6.0 support
+* Add Python 3.14 support
 
 1.5.1 (2025-04-25)
 ------------------
