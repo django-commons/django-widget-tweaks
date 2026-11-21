@@ -3,11 +3,11 @@ django-widget-tweaks
 ====================
 
 .. image:: https://img.shields.io/pypi/v/django-widget-tweaks.svg
-   :target: https://pypi.python.org/pypi/django-widget-tweaks
+   :target: https://pypi.org/project/django-widget-tweaks/
    :alt: PyPI Version
 
-.. image:: https://github.com/django-commons/django-widget-tweaks/workflows/Test/badge.svg
-   :target: https://github.com/django-commons/django-widget-tweaks/actions
+.. image:: https://github.com/django-commons/django-widget-tweaks/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/django-commons/django-widget-tweaks/actions/workflows/test.yml
    :alt: GitHub Actions
 
 Tweak the form field rendering in templates, not in python-level
