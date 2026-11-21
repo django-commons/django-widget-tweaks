@@ -7,18 +7,32 @@ permissions:
 
 jobs:
   build:
-    name: build (Python ${{ matrix.python-version }})
+    name: build (Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       max-parallel: 5
       matrix:
-        python-version:
-        - '3.11'
-        - '3.12'
-        - '3.13'
-        - '3.14'
-        - 'pypy-3.11'
+        python-version: ['3.11', '3.12', '3.13', '3.14']
+        django-version: ['5.2', '6.0', '6.1']
+        include:
+          # PyPy, to back the PyPy classifier
+          - python-version: 'pypy-3.11'
+            django-version: '5.2'
+          # Django 6.1 is the first release to support Python 3.15
+          - python-version: '3.15'
+            django-version: '6.1'
+          # Tox configuration for QA environment
+          - python-version: '3.13'
+            django-version: 'qa'
+          # Django main is allowed to fail, see ignore_outcome in tox.ini
+          - python-version: '3.14'
+            django-version: 'main'
+        exclude:
+          - python-version: '3.11'
+            django-version: '6.0'
+          - python-version: '3.11'
+            django-version: '6.1'
 
     steps:
     # Actions are pinned to a full-length commit SHA
@@ -39,3 +53,5 @@ jobs:
     - name: Tox tests
       run: |
         tox -v
+      env:
+        DJANGO: ${{ matrix.django-version }}
