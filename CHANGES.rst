@@ -11,6 +11,8 @@ Unreleased
 * Drop support for Python 3.9, 3.10 and PyPy 3.10
 * Add Django 6.0 support
 * Add Python 3.14 support
+* Add Python 3.15 support
+* Raise ``TemplateSyntaxError`` when ``render_field`` has no field argument (#175)
 
 1.5.1 (2025-04-25)
 ------------------
