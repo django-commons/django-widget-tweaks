@@ -36,6 +36,8 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/django-commons/django-widget-tweaks"
+Changelog = "https://github.com/django-commons/django-widget-tweaks/blob/master/CHANGES.rst"
+Issues = "https://github.com/django-commons/django-widget-tweaks/issues"
 
 [tool.setuptools]
 packages = ["widget_tweaks", "widget_tweaks.templatetags"]
