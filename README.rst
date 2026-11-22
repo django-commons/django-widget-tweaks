@@ -2,6 +2,10 @@
 django-widget-tweaks
 ====================
 
+.. image:: https://img.shields.io/badge/Django%20Commons-Project-blue.svg
+   :target: https://github.com/django-commons/
+   :alt: Django Commons
+
 .. image:: https://img.shields.io/pypi/v/django-widget-tweaks.svg
    :target: https://pypi.org/project/django-widget-tweaks/
    :alt: PyPI Version
