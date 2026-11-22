@@ -1,4 +1,4 @@
-name: Release
+name: Publish Python 🐍 distribution 📦 to PyPI
 
 on:
   push:
@@ -18,7 +18,7 @@ permissions: {}
 
 jobs:
   build:
-    name: Build distribution
+    name: Build distribution 📦
     # Prevent this workflow from running on forks
     if: github.repository == 'django-commons/django-widget-tweaks'
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           path: dist/
 
   publish-to-pypi:
-    name: Publish package to PyPI
+    name: Publish Python 🐍 distribution 📦 to PyPI
     needs:
       - build
     runs-on: ubuntu-latest
@@ -71,11 +71,11 @@ jobs:
           name: python-package-distributions
           path: dist/
 
-      - name: Publish package to PyPI
+      - name: Publish distribution 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
 
   github-release:
-    name: Upload the package to GitHub Release
+    name: Upload the Python 🐍 distribution 📦 to GitHub Release
     needs:
       - publish-to-pypi
     runs-on: ubuntu-latest
